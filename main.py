@@ -38,13 +38,11 @@ async def shutdown_event():
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # For development. In production, specify your domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    expose_headers=settings.CORS_EXPOSE_HEADERS,
 )
-
 # Register global router
 app.include_router(router, prefix=settings.FASTAPI_API_V1_PATH)
 
