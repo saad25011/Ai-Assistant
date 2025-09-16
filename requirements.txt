@@ -1,0 +1,11 @@
+uvicorn==0.34.0
+fastapi-socketio == 0.0.10
+fastapi==0.115.12
+dotenv==0.9.9
+langgraph==0.6.7
+google-genai==1.37.0
+langchain-google-genai==2.1.11
+pytz==2025.2
+langchain-tavily==0.2.11
+langchain-community==0.3.29
+langchain-openai==0.3.33
