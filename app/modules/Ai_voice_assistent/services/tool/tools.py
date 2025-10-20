@@ -14,6 +14,7 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 @tool
 def get_date_time() -> str:
     """Get the current date and time in a formatted string."""
+    
     date = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
     return date
 
@@ -36,7 +37,9 @@ def tavily_search(query: str) -> str:
         {"role": "user", "content": result_str}
     ])
     print(f"Search results summary: {summary.content}")
+
     return summary.content
 
 tools = [get_date_time, tavily_search]
+
 tool_node = ToolNode(tools)
