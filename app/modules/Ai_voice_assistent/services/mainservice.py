@@ -23,6 +23,7 @@ graph_builder.add_node("logical", logical_agent)
 graph_builder.add_node("datetime", datetime_agent)
 
 graph_builder.add_edge(START, "classifier")
+
 graph_builder.add_edge("classifier", "router")
 graph_builder.add_conditional_edges(
     "router",
