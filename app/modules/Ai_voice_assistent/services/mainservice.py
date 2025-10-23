@@ -31,6 +31,7 @@ graph_builder.add_edge("datetime", END)
 graph = graph_builder.compile()
 
 # ________________text cleaning utility ________________
+
 def clean_text(text: str) -> str:
     # Remove newlines
     text = text.replace("\n", " ")
@@ -41,6 +42,7 @@ def clean_text(text: str) -> str:
     return text
 
 # ---------------- function calling ----------------
+
 async def agentic_graph(query: str):
     print("Agentic graph invoked")
     state = graph.invoke({"messages": [{"role": "user", "content": query}]})
