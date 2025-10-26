@@ -46,5 +46,7 @@ def clean_text(text: str) -> str:
 async def agentic_graph(query: str):
     
     state = graph.invoke({"messages": [{"role": "user", "content": query}]})
+    
     text_cleaning = clean_text(state['messages'][-1].content)
+
     return{"response": text_cleaning}
