@@ -7,8 +7,6 @@ from app.modules.Ai_voice_assistent.services.tool.tools import tools, tool_node,
 #calling agents
 from app.modules.Ai_voice_assistent.services.agent.agents import therapist_agent, logical_agent, datetime_agent, classify_message, router, State
 
-
-
 # ---------------- Graph ----------------
 graph_builder = StateGraph(State)
 
