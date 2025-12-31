@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 from app.modules.persona.schema.schema import personaSchema
 
-app = FastAPI(title="Persona API", version="1.0.0"
+app = APIRouter(title="Persona API", version="1.0.0"
 )
 
 
